@@ -19,3 +19,11 @@ function! CleverTab()"{{{
 endfunction"}}}
 
 inoremap <silent> <tab> <c-r>=CleverTab()<cr>
+
+" --- tmux navigator
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
