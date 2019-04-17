@@ -35,4 +35,4 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 let g:go_list_type = "quickfix"
 
 " Use gd (already a default) to go to definition and now gb to go back.
-nnoremap <buffer> <silent> gb :call go#def#StackPop(v:count1)<cr>
+autocmd FileType go nnoremap <buffer> <silent> gb :call go#def#StackPop(v:count1)<CR>
