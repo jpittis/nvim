@@ -5,7 +5,7 @@ filetype plugin indent on
 set nocompatible
 
 set hlsearch
-" I'm using ctrl-l for window movement in tmux so I gotta rebind clear to <leader>-l.
+" Use ctrl-l for window movement in tmux so rebind clear to <leader>-l.
 nnoremap <leader>l :nohl<CR><C-L>
 
 set number
