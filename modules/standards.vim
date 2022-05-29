@@ -30,3 +30,9 @@ nmap gd :call CocActionAsync('jumpDefinition')<CR>
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 " Use leader-t for type information.
 nnoremap <silent> <leader>t :call CocActionAsync('doHover')<cr>
+" Install some plugins by default.
+let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver',
+      \'coc-json', 'coc-prettier', 'coc-go']
+" Next and previous error.
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
+nmap <silent> ]e <Plug>(coc-diagnostic-next)
