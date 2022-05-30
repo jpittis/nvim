@@ -28,11 +28,17 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nmap gd :call CocActionAsync('jumpDefinition')<CR>
 " Import on save.
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
-" Use leader-t for type information.
-nnoremap <silent> <leader>t :call CocActionAsync('doHover')<cr>
+" Use leader-i for type information.
+nnoremap <silent> <leader>i :call CocActionAsync('doHover')<cr>
 " Install some plugins by default.
 let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver',
       \'coc-json', 'coc-prettier', 'coc-go']
 " Next and previous error.
 nmap <silent> [e <Plug>(coc-diagnostic-prev)
 nmap <silent> ]e <Plug>(coc-diagnostic-next)
+" Use gt to toggle to Go test file.
+nmap gt :call CocAction('runCommand', 'go.test.toggle')<CR>
+" Apply AutoFix (e.g. add import) to problem on current line.
+nmap <leader>qf <Plug>(coc-fix-current)
+" Run the closest test with leader-t.
+nmap <silent> <leader>t :TestNearest<CR>

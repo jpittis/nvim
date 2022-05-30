@@ -27,6 +27,7 @@ set tw=90
 set smarttab
 set smartindent
 set autoindent
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
